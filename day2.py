@@ -14,8 +14,10 @@ def part1(i):
             depth -= d
     return depth, horizontal
 
+
 d, h = part1(input)
 print('part 1 : {}'.format(d * h))
+
 
 def part1(i):
     horizontal = 0
@@ -31,6 +33,7 @@ def part1(i):
         else :
             aim -= d
     return depth, horizontal, aim
+
 
 d, h, a = part1(input)
 print('part 2 : {}'.format(d * h))
