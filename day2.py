@@ -1,5 +1,6 @@
-with open('./input_day_2.txt') as file :
+with open('./input_day_2.txt') as file:
     input = file.read().splitlines()
+
 
 def part1(i):
     horizontal = 0
@@ -10,7 +11,7 @@ def part1(i):
             horizontal += d
         elif 'down' in ele:
             depth += d
-        else :
+        else:
             depth -= d
     return depth, horizontal
 
@@ -30,7 +31,7 @@ def part1(i):
             depth += aim * d
         elif 'down' in ele:
             aim += d
-        else :
+        else:
             aim -= d
     return depth, horizontal, aim
 

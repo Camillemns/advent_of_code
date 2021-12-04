@@ -1,7 +1,8 @@
 # part 1
-with open('./input_day_1.txt') as file :
+with open('./input_day_1.txt') as file:
     input = file.read().splitlines()
     input = [int(ele) for ele in input]
+
 
 def count_incre(l):
     count_incr = 0
@@ -13,7 +14,7 @@ def count_incre(l):
 
 print('part 1 : {}'.format(count_incre(input)))
 
-# part 2
+
 def sliding_window_sum(l, s=3):
     sliding_list = []
     for i in range(len(l) - (s-1)):

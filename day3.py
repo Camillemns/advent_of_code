@@ -1,16 +1,17 @@
 import numpy as np
 from collections import Counter
 
-with open('./input_day_3.txt') as file :
+with open('./input_day_3.txt') as file:
     input = file.read().splitlines()
 
-#part 1
+
 def prepare(input):
     a = np.zeros((len(input[0]), len(input)))
     for i in range(len(input[0])):
         for j in range(len(input)):
             a[i][j] = int(input[j][i])
     return a
+
 
 def count(input):
     liste = prepare(input)
@@ -19,6 +20,7 @@ def count(input):
         occ = Counter(liste[:][i])
         comm.append(occ.most_common())
     return comm
+
 
 gamma_rate = []
 epsilon_rate = []
@@ -35,9 +37,6 @@ print('gamma decimal: {}'.format(int(most_common, 2)))
 print('epsilon decimal: {}'.format(int(least_common, 2)))
 print('part 1 : {}'.format(int(least_common, 2) * int(most_common, 2)))
 
-#part 2
-lst_ox = input
-lst_co2 = input
 
 def rating(n_bit, lst, least=True):
     same, id = ('0', -1) if least else ('1', 0)
@@ -49,6 +48,7 @@ def rating(n_bit, lst, least=True):
         if len(lst) == 1:
             rating = lst[0]
             return rating
+
 
 co2_rating = rating(len(least_common), input)
 ox_rating = rating(len(most_common), input, least=False)
