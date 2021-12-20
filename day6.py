@@ -18,9 +18,9 @@ days = 80
 for i in range(days) :
     fish_days = reset_cycle(fish_days)
 
-print('day 1 : '.format(sum(fish_days)))
+print(sum(fish_days))
 
 for i in range(256 - days) :
     fish_days = reset_cycle(fish_days)
 
-print('day 2 : '.format(sum(fish_days)))
+print(sum(fish_days))
